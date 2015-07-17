@@ -1,0 +1,178 @@
+/* USER DEFINED STYLES */
+body {
+	color: @font-color;
+}
+.site-header {
+  	text-align: center;
+  	.background-gradient(right,@blue-dark,@blue-sober);
+  	color: #fff;
+  	padding: 2em 0;
+    .logo-header {
+    	.sprit-position(260px,100px,-9px -392px);
+  	}
+  	.social-media {
+		display: inline-block;
+	  	list-style: none;
+	  	margin-top: 20px;
+	  	li {
+	  		float: left;
+	  		margin-right: 5px;
+	  		a{
+	  			text-decoration: none;
+	  			color: #fff;
+	  		}
+	  	}
+	}
+}
+.intro-text {
+    text-align: center;
+    padding-bottom: 3em;
+    h2 {
+    	color: @blue-bright;
+    	margin-bottom: 1em;
+    }
+    .about-points {
+    	margin-top: 3em;
+    	p {
+    		text-align: left;
+    	}
+    	.img-caption {
+    		text-transform: uppercase;
+    	}
+    	
+    }
+    .about-points+.about-points {
+	    border-left: 1px dashed @grey-light;
+	}
+}
+.client-videos {
+	background-color: @grey-dark;
+	padding-bottom: 3em;
+	h3 {
+		text-align: center;
+		margin: 1.5em inherit;
+	} 
+	.video-single{
+		.caption {
+			text-transform: uppercase;
+			text-align: left;
+			margin: 1em 1em 0.5em 1em;
+		}
+		p {
+			margin: 0 1em 1em 1em;
+		}
+	}
+}
+.client-testimonials {
+	text-align: center;
+	padding-bottom: 3em;
+	.row+.row {
+		border-top: 1px dashed @grey-light;
+	}
+	.client-logos {
+		padding: 2em;
+		span {
+			.sprit-position(195px,50px,-5px -104px);
+		}
+	}
+	.client-logos+.client-logos {
+	    border-left: 1px dashed @grey-light;
+	}
+}
+.key-staff {
+	.background-gradient(left,@blue-dark,@blue-sober);
+	text-align: center;
+  	color: #fff;
+  	padding-top: 2em;
+  	img {
+  		max-width: 100%;
+  		margin-top: 1em;
+  	}
+}
+.site-footer {
+	background-color: @blue-sober-dark;
+	padding: 3em 0;
+	.logo-footer {
+		background-size: 200%;
+		.sprit-position(260px,100px,0 -337px);
+		@media (max-width:991px) {
+			background-size: 150%;
+			.sprit-position(260px,70px,0 -249px);
+		}
+	}
+	.address {
+		color: #FFF;
+		text-align: right;
+	}
+}
+.enquiry-section {
+	background-color: @grey-lighter;
+	position: relative;
+	.title {
+		cursor: pointer;
+		.background-gradient(left,@blue-dark,@blue-sober);
+		p {
+			text-transform: uppercase;
+			color: #FFF;
+			text-align: center;
+			margin: 5px auto;
+		}
+	}
+	.form-content {
+		position: absolute;
+		right: 0;
+		top: 35px;
+		border-bottom-left-radius: 5px;
+		padding-top: 15px;
+  		background-color: inherit;
+  		z-index: 1;
+  		input[type="submit"] {
+  			.background-gradient(left,@blue-dark,@blue-sober);
+  		}
+	}
+}
+/* USER DEFINED MIXINGS */
+.background-gradient(@direction: bottom,@from: #fff,@to: #fff) {
+	background: -webkit-linear-gradient(@direction, @from , @to); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@direction, @from, @to); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@direction, @from, @to); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to @direction, @from , @to); /* Standard syntax */
+}
+.sprit-position(@width,@height,@position) {
+	width: @width;
+  	height: @height;
+  	background-position: @position;
+}
+/* USER DEFINED VARIABLES */
+@blue-dark: #325e6d;   /* used for site header gradient */
+@blue-sober: #7e9195;  /* used for site header gradient */
+@blue-sober-dark: #809296; /* used as background color for footer*/
+@blue-bright: #00fdff; /* surge header color -- sky blue */
+@blue-darker: #003d4c;
+@font-color: @blue-darker;
+@grey-lighter: #f0f2f2; /* used as a background-color in enquiry div*/
+@grey-light: #bec7c9;  /* used as borders */
+@grey-dark: #cdd4d6; /* used as background color in videos sectin */
+
+/* SPRITE CLASSES */
+.sprite {
+	background: url('images/sprite.png') 0 0 no-repeat;
+	display: inline-block;
+}
+.facebook {
+	.sprit-position(33px,32px,-37px -4px);
+}
+.instagram {
+	.sprit-position(33px,32px,-75px -4px);
+}
+.twitter {
+	.sprit-position(33px,32px,-115px -4px);
+}
+.youtube {
+	.sprit-position(33px,32px,-155px -4px);
+}
+.custom-arrow {
+	.sprit-position(33px,32px,-6px -4px);
+	margin: 1.5em auto 0.5em auto;
+}
+
