@@ -84,10 +84,42 @@ body {
 	text-align: center;
   	color: #fff;
   	padding-top: 2em;
-  	img {
-  		max-width: 100%;
-  		margin-top: 1em;
-  	}
+  	.key-staff-box {
+  		position: relative;
+  		margin-bottom: -20px;
+	  	img {
+	  		max-width: 100%;
+	  		margin-top: 1em;
+	  	}
+	  	.staff-description {
+	  		position: absolute;
+	  		width: 100%;
+	  		top: 0;
+	  		left: 0;
+	  		background-color: @blue-sober-dark;
+	  		height: 100%;
+	  		opacity: 0.9;
+	  		display: none;
+	  		margin-top: 1em;
+	  		.content {
+	  			position: absolute;
+			    bottom: 0;
+			    padding: 0 25% 2em;
+			    width: 100%;
+			    text-align: left;
+			    button.close {
+			    	color: #fff;
+				    opacity: 1;
+				    margin-top: 1em;
+				    font-weight: normal;
+				    font-size: 1em;
+			    }
+			}
+	  	}
+	  	.staff-description.active {
+	  		display: inline-block;
+	  	}
+	}
 }
 .site-footer {
 	background-color: @blue-sober-dark;
@@ -184,51 +216,86 @@ body {
 	position: absolute;
     height: 50%;
     top: 17%;
-    
+    width: 7%;
+}
+.pointer.active {
+	background-image: url(images/team.jpg);
+    background-size: 1432% 194%;
+    background-repeat: no-repeat;
 }
 .pointer:hover {
-    	border-left: 5px solid #fff;
-		border-right: 5px solid #fff;
-    }
-.ben {
-	left: 45.5%;
-	width: 9%;
-	&:hover {
-		
+    	border: 3px solid #fff;
 	}
+.ben {
+	left: 46.5%;
+	// width: 9%;
+}
+.ben.active {
+	background-position: 50.1% 30%;
+    border: 3px solid #fff;
 }
 .aegir {
-	width: 8%;
-	left: 54.5%;
-	&:hover {
-		
-	}
+	// width: 8%;
+	left: 55%;
+}
+.aegir.active {
+	background-position: 59.1% 30%;
+    border: 3px solid #fff;
 }
 .tim {
-	width: 7.1%;
+	// width: 7.1%;
 	left: 62.5%;
 }
+.tim.active {
+	background-position: 67.3% 30%;
+    border: 3px solid #fff;
+}
 .alex {
-	width: 8%;
-	left: 69.6%;
+	// width: 8%;
+	left: 70.1%;
+}
+.alex.active {
+	background-position: 75.5% 30%;
+    border: 3px solid #fff;
 }
 .brendon {
-	width: 8%;
+	// width: 8%;
 	left: 77.6%;
 }
+.brendon.active {
+	background-position: 83.6% 30%;
+    border: 3px solid #fff;
+}
 .sal {
-	width: 7%;
-	left: 38.6%;
+	// width: 7%;
+	left: 38.1%;
+}
+.sal.active {
+	background-position: 41% 30%;
+    border: 3px solid #fff;
 }
 .hector {
-	width: 6.8%;
+	// width: 6.8%;
 	left: 31.6%;
 }
+.hector.active {
+	background-position: 33.9% 30%;
+    border: 3px solid #fff;
+}
 .paris {
-	width: 6.8%;
+	// width: 6.8%;
 	left: 24.6%;
 }
-.vani {
-	width: 7%;
-	left: 17%;
+.paris.active {
+	background-position: 26.5% 30%;
+    border: 3px solid #fff;
 }
+.vani {
+	// width: 7%;
+	left: 17.5%;
+}
+.vani.active {
+	background-position: 18.7% 30%;
+    border: 3px solid #fff;
+}
+
