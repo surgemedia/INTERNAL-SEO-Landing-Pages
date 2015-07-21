@@ -169,7 +169,7 @@ body {
   	.key-staff-box {
   		position: relative;
   		margin-bottom: -20px;
-	  	img {
+	  	#staff {
 	  		max-width: 100%;
 	  		margin-top: 1em;
 	  	}
@@ -309,25 +309,43 @@ body {
 
 .pointer {
 	position: absolute;
-    height: 50%;
-    top: 17%;
+    // height: 50%;
+    // top: 17%;
+    height: 20%;
+    top: 20%;
+    @media (max-width:991px) {
+    	top: 26%;
+    }
     width: 7%;
+    overflow: hidden;
+    img {
+    	width: 1425%;
+  		height: 484%;
+		position: absolute;
+		top: -86%;
+		display: none;
+    }
 }
 .pointer.active {
-	background-image: url(images/team.jpg);
+	// background-image: url(images/team.jpg);
     background-size: 1432% 194%;
     background-repeat: no-repeat;
+    img {
+    	display: block;
+    }
 }
 .pointer:hover {
-    	border: 3px solid #fff;
-	}
+}
 .ben {
 	left: 46.5%;
 	// width: 9%;
 }
 .ben.active {
 	background-position: 50.1% 30%;
-    border: 3px solid #fff;
+	border-radius: 50%;
+    img {
+    	left: -662%;
+    }
 }
 .aegir {
 	// width: 8%;
@@ -335,7 +353,32 @@ body {
 }
 .aegir.active {
 	background-position: 59.1% 30%;
-    border: 3px solid #fff;
+	img {
+		left: -784%;
+	}
+}
+.aegir.active:before {
+  content: '';
+  width: 150%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 36%;
+  transform: rotate(-72deg);
+  background-color: #809296;
+  opacity: 0.9;
+  z-index: 1;
+}
+.aegir.active:after {
+  content: '';
+  width: 150%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: -86%;
+  transform: rotate(72deg);
+  background-color: #809296;
+  opacity: 0.9;
 }
 .tim {
 	// width: 7.1%;
@@ -343,7 +386,16 @@ body {
 }
 .tim.active {
 	background-position: 67.3% 30%;
-    border: 3px solid #fff;
+	transform: rotate(45deg);
+	img {
+		left: -745%;
+		transform: rotate(-45deg);
+		top: 36%;
+		@media (max-width:991px) { 
+			left: -739%;
+		    top: 22%;
+		}
+	}
 }
 .alex {
 	// width: 8%;
@@ -351,7 +403,9 @@ body {
 }
 .alex.active {
 	background-position: 75.5% 30%;
-    border: 3px solid #fff;
+	img {
+		left: -999%;
+	}
 }
 .brendon {
 	// width: 8%;
@@ -359,7 +413,10 @@ body {
 }
 .brendon.active {
 	background-position: 83.6% 30%;
-    border: 3px solid #fff;
+	border-radius: 50%;
+	img {
+		left: -1106%;
+	}
 }
 .sal {
 	// width: 7%;
@@ -367,7 +424,32 @@ body {
 }
 .sal.active {
 	background-position: 41% 30%;
-    border: 3px solid #fff;
+	img {
+		left: -543%;
+	}
+}
+.sal.active:before {
+  content: '';
+  width: 150%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 36%;
+  transform: rotate(-72deg);
+  background-color: @blue-sober-dark;
+  opacity: 0.9;
+  z-index: 1;
+}
+.sal.active:after {
+  content: '';
+  width: 150%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: -86%;
+  transform: rotate(72deg);
+  background-color: @blue-sober-dark;
+  opacity: 0.9;
 }
 .hector {
 	// width: 6.8%;
@@ -375,22 +457,45 @@ body {
 }
 .hector.active {
 	background-position: 33.9% 30%;
-    border: 3px solid #fff;
+	transform: rotate(45deg);
+	img {
+		left: -433%;
+		transform: rotate(-45deg);
+		top: -260%;
+		@media (max-width:991px) { 
+			left: -424%;
+		    top: -250%;
+		}
+	}
 }
 .paris {
 	// width: 6.8%;
 	left: 24.6%;
+	top: 26%;
+	@media (max-width:991px) {
+		top: 30%;
+	}
 }
 .paris.active {
 	background-position: 26.5% 30%;
-    border: 3px solid #fff;
+	img {
+		left: -351%;
+		top: -115%
+	}
 }
 .vani {
 	// width: 7%;
 	left: 17.5%;
+	top: 26%;
+	@media (max-width:991px) {
+		top: 30%;
+	}
 }
 .vani.active {
 	background-position: 18.7% 30%;
-    border: 3px solid #fff;
+	border-radius: 50%;
+	img {
+		left: -250%;
+		top: -115%
+	}
 }
-
