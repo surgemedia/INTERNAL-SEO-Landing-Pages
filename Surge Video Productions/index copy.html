@@ -22,10 +22,10 @@
                     </div>
                     <div class="col-md-3">
                         <ul class="social-media">
-                            <li><a href="http://www.facebook.com/surgemedia"><span class="sprite facebook"></span></a></li>
-                            <li><a href="http://instagram.com/surgemedia"><span class="sprite instagram"></span></a></li>
-                            <li><a href="http://twitter.com/surgemedia"><span class="sprite twitter"></span></a></li>
-                            <li><a href="http://www.youtube.com/user/surgemediavideo"><span class="sprite youtube"></span></a></li>
+                            <li><a href="http://www.facebook.com/surgemedia" target="_blank"><span class="sprite facebook"></span></a></li>
+                            <li><a href="http://instagram.com/surgemedia" target="_blank"><span class="sprite instagram"></span></a></li>
+                            <li><a href="http://twitter.com/surgemedia" target="_blank"><span class="sprite twitter"></span></a></li>
+                            <li><a href="http://www.youtube.com/user/surgemediavideo" target="_blank"><span class="sprite youtube"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -329,6 +329,16 @@ By keeping up-to-date with the latest trends and technology, I make sure that my
                 $('button.close').on('click',function(){
                     $('.staff-description.active').removeClass('active');
                     $('.pointer').removeClass('active');
+                });
+                $('.pointer').on('mouseenter',function(){
+                    $('.pointer').removeClass('active');
+                    $(this).addClass('active');
+                    $('.staff-description').addClass('active');
+                    var staffTitle = $(this).data('title'),staffDesc = $(this).data('description');
+                    $('.staff-description.active h3').text(staffTitle);
+                    $('.staff-description.active p').text(staffDesc);
+                    $('.staff-description-mobile h3').text(staffTitle);
+                    $('.staff-description-mobile p').text(staffDesc);
                 });
         </script>
         <script type="text/javascript">
